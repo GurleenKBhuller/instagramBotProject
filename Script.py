@@ -165,8 +165,8 @@ if __name__ == '__main__':
     df = pd.read_csv(file_path)
     midpoint = len(df) // 2
     df1, df2 = df.iloc[:midpoint], df.iloc[midpoint:]
-    driver1 = login('demoaccount1501', 'admin12345')
-    driver2 = login('demoaccount1501', 'admin12345')
+    driver1 = login('', '')
+    driver2 = login('', '')
     thread1 = threading.Thread(target=process_data, args=(df1, 0, len(df1), driver1))
     thread2 = threading.Thread(target=process_data, args=(df2, 0, len(df2), driver2))
 
